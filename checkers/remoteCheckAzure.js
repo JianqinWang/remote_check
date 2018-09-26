@@ -5,12 +5,12 @@ function remoteCheckAzure(destContainer, credentials, objNames, done) {
     const { storageAccount, storageAccessKey, host } = credentials;
     const blobService = azure.createBlobService(storageAccount, storageAccessKey, host);
     return async.eachLimit(objNames, 10, (objName, next) => {
-        return blobService.getBlobProperties(destContainer, objName, (err, data) => {
+        return blobService.doesBlobExist(destContainer, objName, (err, data) => {
             if (err) {
                 console.log(`err for headObject ${objName}`, err);
                 return next(err);
             } else {
-                console.log(`${objName} exists!`);
+                console.log(`${objName} exists in ${destContainer}!`);
             }
             return next();
         });

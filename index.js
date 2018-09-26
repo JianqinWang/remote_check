@@ -3,11 +3,11 @@ const credentials = require('./credentials');
 const constants = require('./constants');
 const checkers = require('./checkers/checkers');
 
-const { sourceBucket, numObjs, destinationBuckets } = constants;
+const { sourceBucket, numObjs, objnamePrefix, destinationBuckets } = constants;
 
 const localObjNames = [];
 for (i = 1; i <= numObjs; i++) {
-    localObjNames.push(`myobjects${i}`);
+    localObjNames.push(`${objnamePrefix}${i}`);
 }
 const remoteObjNames = localObjNames.map(name =>
     `${sourceBucket.bucketName}/${name}`);

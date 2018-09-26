@@ -12,7 +12,7 @@ function remoteCheckGCP(destBucket, credentials, objNames, done) {
                 console.log(`err for headObject ${objName}`, err);
                 return next(err);
             } else {
-                console.log(`${objName} exists!`);
+                console.log(`${objName} exists in ${destBucket}!`);
             }
             return next();
         });

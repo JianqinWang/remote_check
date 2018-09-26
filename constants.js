@@ -1,5 +1,6 @@
 const constants = {
-    numObjs: 1,
+    numObjs: 1, // number of objects 
+    objnamePrefix: 'myobjects', // this is the prefix name used by cosbench
     sourceBucket: {
         bucketName: 'testsourcebucket', // bucket name here
         credentials: 'zenko1', // name of credentials in credentials.js
