@@ -1,0 +1,28 @@
+{
+  "name": "@JianqinWang/remote_check",
+  "version": "0.1",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.9.5"
+  },
+  "repository": "jianqinWang/remote_check",
+  "keywords": [
+    "s3",
+    "cloud",
+    "server"
+  ],
+  "author": "Jianqin Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JianqinWang/remote_check"
+  },
+  "homepage": "https://github.com/JianqinWang/remote_check#readme",
+  "dependencies": {
+    "aws-sdk": "2.28.0",
+    "async": "~2.5.0",
+    "azure-storage": "^2.1.0",
+    "@google-cloud/storage": "2.0.3"
+  },
+  "scripts": {}
+}
