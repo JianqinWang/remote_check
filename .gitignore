@@ -1,3 +1,4 @@
 # ignore gcp credentials
 gcp_key*.json
 credentials.js
+node_modules
